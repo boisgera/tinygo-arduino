@@ -9,4 +9,4 @@ func main() {
 
 ![jsdklsjd](images/desktop_with_arduino_ide.svg)
 
-![jsdklsjd](images/laptop_with_arduino.svg)
+![jsdklsjd](images/laptop_with_arduino_ide.svg)
