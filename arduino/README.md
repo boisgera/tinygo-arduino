@@ -1,4 +1,13 @@
 
+`app.go`:
+
+```go
+package main
+
+func main() {
+	println("Hello from Arduino! 👋")
+}
+```
 
 
 ```bash
@@ -44,10 +53,8 @@ and then implement a `read.py` program:
 ```python
 import serial
 
-
 BAUD_RATE = 9600
 SERIAL_PORT = "/dev/ttyACM0"
-
 
 with serial.Serial(SERIAL_PORT, BAUD_RATE) as file:
     while True:

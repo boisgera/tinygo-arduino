@@ -1,0 +1,2 @@
+#!/bin/bash
+tinygo flash -target=arduino app.go

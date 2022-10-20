@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-const (
+var (
 	Input     = machine.PinConfig{Mode: machine.PinInput}
 	Output    = machine.PinConfig{Mode: machine.PinOutput}
 	inputPin  = machine.D2
@@ -20,7 +20,7 @@ func setup() {
 func main() {
 	setup()
 	for {
-		pressed := !inputPin.Get()
+		pressed := inputPin.Get()
 		if pressed {
 			outputPin.High()
 		} else {
