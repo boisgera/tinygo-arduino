@@ -7,4 +7,6 @@ func main() {
 }
 ```
 
-![jsdklsjd](desktop_with_arduino_ide.svg)
+![jsdklsjd](images/desktop_with_arduino_ide.svg)
+
+![jsdklsjd](images/laptop_with_arduino.svg)
