@@ -1,7 +1,4 @@
-#!/bin/env python
-
-# Third-Party Libraries
-import serial 
+import serial
 
 
 BAUD_RATE = 9600
