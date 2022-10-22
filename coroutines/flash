@@ -1,0 +1,2 @@
+#!/bin/bash
+tinygo flash -target=arduino -scheduler=tasks app.go
