@@ -258,7 +258,7 @@ SYNOPSIS
 
 ## WokWi Simulator
 
-[WokWi -- Online Arduino Simulator](media/wokwi.png)
+![WokWi – Online Arduino Simulator](media/wokwi.png)
 
  1. Sign into <https://wokwi.com/>.
 
