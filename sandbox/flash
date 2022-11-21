@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+avrdude -C /etc/avrdude.conf -p atmega328p -c arduino -P /dev/ttyACM0 -D -U flash:w:app.hex:i
+

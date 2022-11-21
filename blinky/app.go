@@ -12,9 +12,9 @@ func main() {
 	led.Configure(Output)
 	for {
 		led.Low()
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(1000 * time.Millisecond)
 
 		led.High()
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(3000 * time.Millisecond)
 	}
 }
