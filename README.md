@@ -312,8 +312,8 @@ then release it.
 package main
 
 import (
-	"machine"
-	"time"
+    "machine"
+    "time"
 )
 
 var Input = machine.PinConfig{Mode: machine.PinInput}
@@ -326,34 +326,34 @@ var lightPin = machine.D4
 var LightOn = false
 
 func setup() {
-	machine.LED.Configure(Output)
-	ButtonPin.Configure(Input)
+    machine.LED.Configure(Output)
+    ButtonPin.Configure(Input)
 }
 
 func ButtonHandler() {
-	ButtonPressed := !ButtonPin.Get()
-	ButtonRelease := !ButtonPressed && ButtonWasPressed
-	if ButtonRelease {
-		LightOn = !LightOn
-	}
-	ButtonWasPressed = ButtonPressed
+    ButtonPressed := !ButtonPin.Get()
+    ButtonRelease := !ButtonPressed && ButtonWasPressed
+    if ButtonRelease {
+        LightOn = !LightOn
+    }
+    ButtonWasPressed = ButtonPressed
 }
 
 func LightHandler() {
-	if LightOn {
-		lightPin.High()
-	} else {
-		lightPin.Low()
-	}
+    if LightOn {
+        lightPin.High()
+    } else {
+        lightPin.Low()
+    }
 }
 
 func main() {
-	setup()
-	for {
-		ButtonHandler()
-		LightHandler()
-		time.Sleep(100 * time.Millisecond)
-	}
+    setup()
+    for {
+        ButtonHandler()
+        LightHandler()
+        time.Sleep(100 * time.Millisecond)
+    }
 }
 ```
 
