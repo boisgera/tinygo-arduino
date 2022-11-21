@@ -271,11 +271,94 @@ instead of "sketch.ino" and delete the `sketch.ino` file ; we won't need it.
 
  5. Profit! 🎉
 
- ## TODO: LED
+ ## LED
 
- ## TODO: Toggle Button
+To replicate the Blinky project, but with an external LED instead of the 
+onboard one, we need little change in the `app.go` program; if we intend
+to connect the LED D4, we have:
 
- ## TODO: Toggle Button and LED
+`app.go`:
+```go
+package main
+
+import (
+    "machine"
+    "time"
+)
+
+var Output = machine.PinConfig{Mode: machine.PinOutput}
+
+func main() {
+    led := machine.D4
+    led.Configure(Output)
+    for {
+        led.Low()
+        time.Sleep(1000 * time.Millisecond)
+        led.High()
+        time.Sleep(3000 * time.Millisecond)
+    }
+}
+```
+
+![WokWi – External LED](media/wokwi-LED.png)
+
+
+ ## Toggle Button + LED
+
+To switch the LED state, press the button during at least 0.1 seconds, 
+then release it.
+
+```go
+package main
+
+import (
+	"machine"
+	"time"
+)
+
+var Input = machine.PinConfig{Mode: machine.PinInput}
+var Output = machine.PinConfig{Mode: machine.PinOutput}
+
+var ButtonPin = machine.D2
+var ButtonWasPressed = false
+
+var lightPin = machine.D4
+var LightOn = false
+
+func setup() {
+	machine.LED.Configure(Output)
+	ButtonPin.Configure(Input)
+}
+
+func ButtonHandler() {
+	ButtonPressed := !ButtonPin.Get()
+	ButtonRelease := !ButtonPressed && ButtonWasPressed
+	if ButtonRelease {
+		LightOn = !LightOn
+	}
+	ButtonWasPressed = ButtonPressed
+}
+
+func LightHandler() {
+	if LightOn {
+		lightPin.High()
+	} else {
+		lightPin.Low()
+	}
+}
+
+func main() {
+	setup()
+	for {
+		ButtonHandler()
+		LightHandler()
+		time.Sleep(100 * time.Millisecond)
+	}
+}
+```
+
+![WokWi – External LED](media/wokwi-button-LED.png)
+
 
  ## TODO: ADC
 
