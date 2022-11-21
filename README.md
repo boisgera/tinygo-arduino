@@ -66,6 +66,45 @@ Hello from Arduino! 👋
 
 ## Time
 
+`app.go`:
+```go
+package main
+
+import "time"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        println("Hello from Arduino! 👋")
+        time.Sleep(500 * time.Millisecond)
+    }
+}
+```
+
+`read.py`:
+```python
+import serial
+
+BAUD_RATE = 9600
+SERIAL_PORT = "/dev/ttyACM0"
+
+with serial.Serial(SERIAL_PORT, BAUD_RATE) as file:
+    while True:
+        bytes = file.readline().strip()
+        print(bytes.decode("utf-8"))
+```
+
+```bash
+tinygo flash -target=arduino app.go
+```
+
+```bash
+$ ./read.py
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+```
+
+`app.go`:
 ```go
 package main
 
@@ -74,9 +113,19 @@ import "time"
 func main() {
     for {
         println("Hello from Arduino! 👋")
-		    time.Sleep(500 * time.Millisecond)
-	  }
+        time.Sleep(500 * time.Millisecond)
+    }
 }
+```
+
+```bash
+$ ./read.py
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+...
 ```
 
 ## LED
