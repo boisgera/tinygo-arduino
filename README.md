@@ -258,13 +258,16 @@ SYNOPSIS
 
 ## WokWi Simulator
 
+[WokWi -- Online Arduino Simulator](media/wokwi.png)
+
  1. Sign into <https://wokwi.com/>.
 
- 2. Start from Scratch with Arduino Uno.
+ 2. Start from Scratch with Arduino Uno. You may rename the project "Blinky"
+instead of "sketch.ino" and delete the `sketch.ino` file ; we won't need it.
 
- 3. Select "Load HEX File and Start Simulation ..." from the command palette (F1).
+ 3. In the editor, right-click and open the command palette (or press F1).
 
- 4. Upload your `app.hex` file.
+ 4. Select "Load HEX File and Start Simulation ..." and upload your `app.hex` file.
 
  5. Profit! 🎉
 
