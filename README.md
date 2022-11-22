@@ -412,7 +412,70 @@ func main() {
 }
 ```
 
- ## TODO: PWM
+ ## PWM
+
+See [Using PWM](https://tinygo.org/docs/tutorials/pwm/).
+
+⚠️ No floating-point computations!!!
+
+`app.go`:
+```go
+package main
+
+import (
+	"machine"
+	"time"
+)
+
+var pwm machine.PWM
+var pwmPin = machine.D5
+var ch uint8
+
+func setup() {
+	pwm.Configure(machine.PWMConfig{})
+	var err error
+	ch, err = pwm.Channel(pwmPin)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func main() {
+	setup()
+	x := pwm.Top()
+	for {
+		pwm.Set(ch, x)
+		x = x * 9 / 10
+		if x == 0 {
+			x = pwm.Top()
+		}
+		// PWM period is 16 ms
+		time.Sleep(100 * time.Millisecond)
+	}
+}
+```
+
+![WokWi – ADC](media/wokwi-PWM.png)
+
+`diagram.json`:
+```json
+{
+  "version": 1,
+  "author": "Sébastien Boisgérault",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 159.41, "left": 11.03, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 80.49,
+      "left": 149.12,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [ [ "uno:GND.1", "led1:C", "black", [ "v0" ] ], [ "uno:5", "led1:A", "green", [ "v0" ] ] ]
+}
+```
 
  ## TODO: ADC and PWM
 
