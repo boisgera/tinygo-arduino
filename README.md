@@ -360,8 +360,9 @@ func main() {
 ![WokWi – External LED](media/wokwi-button-LED.png)
 
 
- ## TODO: ADC
+ ## ADC
 
+`app.go`:
 ```go
 package main
 
@@ -387,6 +388,7 @@ func main() {
 
 ![WokWi – ADC](media/wokwi-ADC.png)
 
+`diagram.json`:
 ```json
 {
   "version": 1,
