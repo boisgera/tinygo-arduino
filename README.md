@@ -362,6 +362,54 @@ func main() {
 
  ## TODO: ADC
 
+```go
+package main
+
+import (
+    "machine"
+    "time"
+)
+
+var adc = machine.ADC{Pin: machine.ADC0}
+
+func setup() {
+    machine.InitADC()
+}
+
+func main() {
+    setup()
+    for {
+        println(adc.Get() >> 6)
+        time.Sleep(1 * time.Second)
+    }
+}
+```
+
+![WokWi – ADC](media/wokwi-ADC.png)
+
+```json
+{
+  "version": 1,
+  "author": "Sébastien Boisgérault",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 223.8,
+      "left": 38.76,
+      "attrs": { "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "pot1:GND", "black", [ "v36.18", "h-178.04" ] ],
+    [ "uno:5V", "pot1:VCC", "red", [ "v38.57", "h-120.71" ] ],
+    [ "uno:A0", "pot1:SIG", "green", [ "v21.83", "h56.09", "v118.38", "h-229.59" ] ]
+  ]
+}
+```
+
  ## TODO: PWM
 
  ## TODO: ADC and PWM
