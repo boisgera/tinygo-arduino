@@ -7,10 +7,12 @@ import (
 
 var pwm machine.PWM
 var pwmPin = machine.D5
+var period uint64
 var ch uint8
 
 func setup() {
 	pwm.Configure(machine.PWMConfig{})
+	period = pwm.Period() // 16_000 ns
 	var err error
 	ch, err = pwm.Channel(pwmPin)
 	if err != nil {
@@ -20,14 +22,15 @@ func setup() {
 
 func main() {
 	setup()
-	x := pwm.Top()
+	top := pwm.Top()
+	x := top
 	for {
+		println(x)
 		pwm.Set(ch, x)
-		x = x * 9 / 10
+		x = x - top/100
 		if x == 0 {
-			x = pwm.Top()
+			x = top
 		}
-		// PWM period is 16 ms
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(10 * time.Duration(period))
 	}
 }
