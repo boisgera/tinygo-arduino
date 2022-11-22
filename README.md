@@ -486,6 +486,6 @@ func main() {
 
   - 📖 [TinyGo `machine` package for Arduino Uno](https://tinygo.org/docs/reference/microcontrollers/machine/arduino/)
 
-  - 📖 [Arduino Projects Book](doc/arduino-projects-book.pdf), license [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/) by Arduino LLC.
+  - 📖 [Arduino Projects Book](https://github.com/boisgera/tinygo-arduino/raw/master/doc/arduino-projects-book.pdf), license [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/) by Arduino LLC.
 
 
