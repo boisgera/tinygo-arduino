@@ -480,8 +480,6 @@ func main() {
 }
 ```
 
-## TODO: ADC and PWM
-
 ## Documentation
 
   - 📖 [TinyGo `machine` package for Arduino Uno](https://tinygo.org/docs/reference/microcontrollers/machine/arduino/).
