@@ -91,3 +91,5 @@ same error.
     step that has issues.
 
   - is the lack of proper module declaration an issue here?
+
+  - try Go version of CGo first? (would make sense)
