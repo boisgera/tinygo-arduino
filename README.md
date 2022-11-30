@@ -58,6 +58,38 @@ $ du -h app
 1,1M	app
 ```
 
+## Hello world! (PC/TinyGo version)
+
+`app.go`:
+```go
+package main
+
+func main() {
+    println("Hello! 👋")
+}
+```
+
+Run from source:
+```
+$ tinygo run app.go
+Hello! 👋
+```
+
+Build:
+```
+$ tinygo build app.go
+(base) boisgera@oddball:~/tmp/sandbox$ ls
+app  app.go
+(base) boisgera@oddball:~/tmp/sandbox$ du -h app
+68K	app
+```
+
+Execute:
+```
+$ ./app 
+Hello! 👋
+```
+
 ## Hello world! (Arduino/TinyGo version)
 
 `app.go`:
