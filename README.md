@@ -1,7 +1,64 @@
 # TinyGo for Arduino Uno
 
-## Hello world!
+## Hello world! (PC/Go version)
 
+`app.go`:
+```go
+package main
+
+func main() {
+    println("Hello! 👋")
+}
+```
+
+Run from source:
+```
+$ go run app.go
+Hello! 👋
+```
+
+Compile:
+```
+$ go build app.go
+$ ls
+app  app.go
+```
+
+Execute:
+```
+$ ./app 
+Hello! 👋
+```
+
+
+File size:
+```
+$ du -h app
+1,2M	app
+```
+
+Cross-compile (Windows):
+```
+$ GOOS=windows go build app.go 
+ ls
+app  app.exe  app.go
+$ du -h app.exe 
+1,2M	app.exe
+```
+
+Cross-compile (Apple Silicon):
+```
+$ rm app app.exe
+$ ls
+app.go
+$ GOOS=darwin GOARCH=arm64 go build app.go
+$ ls
+app  app.go
+$ du -h app
+1,1M	app
+```
+
+## Hello world! (Arduino/TinyGo version)
 
 `app.go`:
 ```go
