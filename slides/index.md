@@ -89,7 +89,7 @@ TinyGo
   - Target architectures beyond Linux/Windows/Mac: **AVR**, ARM (Cortex M), 
     RISC-V, XTensa, WebAssembly.
 
-  - `machine` package: library  support for GPIO, ACD, PWM, etc.
+  - `machine` package: support for GPIO, ADC, PWM, etc.
 
 
 Languages for Embedded Platforms (?)
