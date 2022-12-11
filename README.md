@@ -1,6 +1,6 @@
 # TinyGo for Arduino Uno
 
-[📖 Introduction](slides/index.html)
+[📖 Introduction](https://boisgera.github.io/tinygo-arduino/slides/index.html)
 
 --------------------------------------------------------------------------------
 
