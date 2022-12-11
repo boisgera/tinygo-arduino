@@ -1,0 +1,4 @@
+#!/bin/bash
+pandoc --standalone \
+       -t revealjs -V theme:white -V slideNumber:true -V history:true --mathjax \
+       -o index.html index.md

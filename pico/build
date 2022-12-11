@@ -1,0 +1,2 @@
+#!/bin/bash
+tinygo build -target=pico app.go

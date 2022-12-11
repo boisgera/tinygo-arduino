@@ -1,5 +1,9 @@
 # TinyGo for Arduino Uno
 
+[📖 Introduction](slides/index.html)
+
+--------------------------------------------------------------------------------
+
 ## Hello world! (PC/Go version)
 
 `app.go`:
