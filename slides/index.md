@@ -4,6 +4,9 @@ date: Monday, December 12, 2022
 author: Sébastien Boisgérault - Mines Paris, PSL
 ---
 
+## {data-background-image="images/sahand-babali-owjrvbyXYyc-unsplash.jpg"}
+
+
 Arduino
 --------------------------------------------------------------------------------
 
@@ -72,13 +75,11 @@ Like C (efficient, low footprint, ...):
 TinyGo
 --------------------------------------------------------------------------------
 
-"Go compiler for small places", such as:
+"Go compiler for small places"
 
-  - Microcontrollers
+![](images/tinygo-logo.png)
 
-  - Consoles
-
-  - WebAssembly
+Microcontrollers, Consoles, WebAssembly, etc.
 
 
 TinyGo
@@ -92,7 +93,7 @@ TinyGo
   - `machine` package: support for GPIO, ADC, PWM, etc.
 
 
-Languages for Embedded Platforms (?)
+Languages for Embedded Platforms
 --------------------------------------------------------------------------------
 
   - Assembler
