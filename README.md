@@ -1,12 +1,10 @@
 # TinyGo for Arduino
 
-## Introduction
+## 📖 Introduction
 
 [![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)](https://boisgera.github.io/tinygo-arduino/slides/index.html)
 
---------------------------------------------------------------------------------
-
-## Hello world! (PC/Go version)
+## 💻 Hello world! (PC/Go version)
 
 `app.go`:
 ```go
@@ -64,7 +62,7 @@ $ du -h app
 1,1M	app
 ```
 
-## Hello world! (PC/TinyGo version)
+## 💻 Hello world! (PC/TinyGo version)
 
 `app.go`:
 ```go
@@ -96,7 +94,7 @@ $ ./app
 Hello! 👋
 ```
 
-## Hello world! (Arduino/TinyGo version)
+## 📟 Hello world! (Arduino/TinyGo version)
 
 `app.go`:
 ```go
@@ -164,7 +162,7 @@ $ ./read.py
 Hello from Arduino! 👋
 ```
 
-## Time
+## ⏱️ Time
 
 `app.go`:
 ```go
@@ -228,7 +226,7 @@ Hello from Arduino! 👋
 ...
 ```
 
-## Blinky
+## 🚥 Blinky
 
 
 
@@ -290,7 +288,7 @@ Then, edit your `.vscode/settings.json` accordingly
 
 For more details, refer to the [TinyGo documentation](https://tinygo.org/docs/guides/ide-integration/vscode/)
 
-# Intel HEX
+# 📄 Intel HEX
 
 > **Intel hexadecimal object file format**, Intel hex format or Intellec Hex is a file format that conveys binary information in ASCII text form. It is commonly used for programming microcontrollers, EPROMs, and other types of programmable logic devices and hardware emulators. In a typical application, a compiler or assembler converts a program's source code (such as in C or assembly language) to machine code and outputs it into a HEX file. [...] The HEX file is then read by a programmer to write the machine code into a PROM or is transferred to the target system for loading and execution. 
 
@@ -351,7 +349,7 @@ SYNOPSIS
 ...
 ```
 
-## WokWi Simulator
+## 💻 WokWi Simulator
 
 ![WokWi – Online Arduino Simulator](media/wokwi.png)
 
@@ -366,7 +364,7 @@ instead of "sketch.ino" and delete the `sketch.ino` file ; we won't need it.
 
  5. Profit! 🎉
 
- ## LED
+ ## 🚥 LED
 
 To replicate the Blinky project, but with an external LED instead of the 
 onboard one, we need little change in the `app.go` program; if we intend
@@ -398,7 +396,7 @@ func main() {
 ![WokWi – External LED](media/wokwi-LED.png)
 
 
- ## Toggle Button + LED
+ ## 🔲 Toggle Button + LED
 
 To switch the LED state, press the button during at least 0.1 seconds, 
 then release it.
@@ -455,7 +453,7 @@ func main() {
 ![WokWi – External LED](media/wokwi-button-LED.png)
 
 
- ## ADC
+ ## 📉 ADC
 
 `app.go`:
 ```go
@@ -507,7 +505,7 @@ func main() {
 }
 ```
 
- ## PWM
+ ## 📈 PWM
 
 See [Using PWM](https://tinygo.org/docs/tutorials/pwm/).
 
