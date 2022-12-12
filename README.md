@@ -226,6 +226,9 @@ Hello from Arduino! 👋
 ...
 ```
 
+⚠️ The standard [`Timer` & `Ticker` standard API](https://pkg.go.dev/time) would be super 
+nice to have, but [they are buggy at the moment](https://github.com/tinygo-org/tinygo/issues/2169#issuecomment-985644057).
+
 ## 🚥 Blinky
 
 
@@ -288,7 +291,7 @@ Then, edit your `.vscode/settings.json` accordingly
 
 For more details, refer to the [TinyGo documentation](https://tinygo.org/docs/guides/ide-integration/vscode/)
 
-# 📄 Intel HEX
+## 📄 Intel HEX
 
 > **Intel hexadecimal object file format**, Intel hex format or Intellec Hex is a file format that conveys binary information in ASCII text form. It is commonly used for programming microcontrollers, EPROMs, and other types of programmable logic devices and hardware emulators. In a typical application, a compiler or assembler converts a program's source code (such as in C or assembly language) to machine code and outputs it into a HEX file. [...] The HEX file is then read by a programmer to write the machine code into a PROM or is transferred to the target system for loading and execution. 
 
@@ -509,7 +512,8 @@ func main() {
 
 See [Using PWM](https://tinygo.org/docs/tutorials/pwm/).
 
-⚠️ No floating-point computations!!!
+⚠️ Floating-point computations are not used here. They are not supported by
+the hardware and thus have to be emulated in software and this is costly.
 
 `app.go`:
 ```go
