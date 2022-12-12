@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-tinygo build -o app.hex -target=arduino app.go

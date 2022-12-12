@@ -1,3 +1,0 @@
-#!/bin/bash
-# clang -c -o add.o add.c
-tinygo build -o app app.go  # failed to run tool: ld.lld
