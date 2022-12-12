@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg](https://boisgera.github.io/tinygo-arduino/slides/index.html)
+[![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)](https://boisgera.github.io/tinygo-arduino/slides/index.html)
 
 --------------------------------------------------------------------------------
 
