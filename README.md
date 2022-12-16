@@ -428,11 +428,11 @@ var Output = machine.PinConfig{Mode: machine.PinOutput}
 var ButtonPin = machine.D2
 var ButtonWasPressed = false
 
-var lightPin = machine.D4
+var LightPin = machine.D4
 var LightOn = false
 
 func setup() {
-    machine.LED.Configure(Output)
+    LightPin.Configure(Output)
     ButtonPin.Configure(Input)
 }
 
@@ -447,9 +447,9 @@ func ButtonHandler() {
 
 func LightHandler() {
     if LightOn {
-        lightPin.High()
+        LightPin.High()
     } else {
-        lightPin.Low()
+        LightPin.Low()
     }
 }
 
