@@ -1,4 +1,2 @@
 #!/bin/bash
-pandoc --standalone \
-       -t revealjs -V theme:white -V slideNumber:true -V history:true --mathjax \
-       -o index.html index.md
+npx @marp-team/marp-cli@latest index.md -o index.html

@@ -1,14 +1,20 @@
 ---
+marp: true
 title: TinyGo & Arduino
-date: Monday, December 12, 2022
 author: Sébastien Boisgérault - Mines Paris, PSL
 ---
 
-## {data-background-image="images/sahand-babali-owjrvbyXYyc-unsplash.jpg"}
+<!-- _color: white -->
 
+![bg brightness:0.5](images/sahand-babali-owjrvbyXYyc-unsplash.jpg)
 
-Arduino
+# TinyGo & Arduino
+
+## Sébastien Boisgérault –⁠ Mines Paris, PSL
+
 --------------------------------------------------------------------------------
+
+# Arduino
 
 Arduino Uno, microcontroller [ATMega328p (Atmel)](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
 
@@ -20,8 +26,10 @@ Arduino Uno, microcontroller [ATMega328p (Atmel)](https://ww1.microchip.com/down
 
   - Data size: ~ 2 KB
 
-Go (aka Golang)
+
 --------------------------------------------------------------------------------
+
+# Go (aka Golang)
 
 "Simple, secure, scalable"
 
@@ -31,8 +39,10 @@ Go (aka Golang)
 
   - Large standard library
 
-Good for
+
 --------------------------------------------------------------------------------
+
+# Good for
 
   - Tooling & Hackers (Python competitor)
 
@@ -40,16 +50,19 @@ Good for
 
   - Distributed & Concurrent Programming, Networking, Cloud-Native Language.
 
-Company & Products
+
 --------------------------------------------------------------------------------
+
+# Company & Products
 
   - Google, Uber, Twitch, Dropbox, Soundcloud, Alibaba, Paypal, etc.
 
   - Caddy (HTTP Server), Docker, Pulumi, Kubernetes (containers, cloud/infra managament), Wails (GUI apps), BubbleTea (TUI framework), Badger (database), WebRTC, MQTT (network/protocols), etc.
     
 
-Positionning
 --------------------------------------------------------------------------------
+
+# Positionning
 
 Like Python (high-level, rapid development, ...):
 
@@ -72,18 +85,21 @@ Like C (efficient, low footprint, ...):
   - Value types & pointers
 
 
-TinyGo
 --------------------------------------------------------------------------------
 
-"Go compiler for small places"
+# TinyGo
 
-![](images/tinygo-logo.png)
+![bg left auto](images/tinygo-logo.png)
+
+**Go compiler for small places**
+
+
 
 Microcontrollers, Consoles, WebAssembly, etc.
 
-
-TinyGo
 --------------------------------------------------------------------------------
+
+# TinyGo
 
   - Small code/data footprint!
 
@@ -92,9 +108,9 @@ TinyGo
 
   - `machine` package: support for GPIO, ADC, PWM, etc.
 
-
-Languages for Embedded Platforms
 --------------------------------------------------------------------------------
+
+# Languages for Embedded Platforms
 
   - Assembler
 
@@ -113,8 +129,9 @@ Languages for Embedded Platforms
   - ...
 
 
-Experiment with TinyGo
 --------------------------------------------------------------------------------
+
+# Experiment with TinyGo
 
   - Simpler than C/ASM (but C interface via CGO?),
 
