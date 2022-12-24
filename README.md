@@ -1,8 +1,10 @@
 # TinyGo for Arduino
 
+![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)]
+
 ## 🧭 Introduction
 
-[![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)](https://boisgera.github.io/tinygo-arduino/slides/index.html)
+[📖 Slide deck](https://boisgera.github.io/tinygo-arduino/slides/index.html)
 
 
 ## 📖 Documentation
