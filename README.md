@@ -1,6 +1,6 @@
 # TinyGo for Arduino
 
-![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)]
+![](slides/images/sahand-babali-owjrvbyXYyc-unsplash.jpg)
 
 ## 🧭 Introduction
 
