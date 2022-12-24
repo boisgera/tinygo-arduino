@@ -152,6 +152,8 @@ avrdude done.  Thank you.
 
 ```
 
+If you are familiar with Python, you can read this message with:
+
 ```bash
 pip install pyserial
 ```
@@ -177,7 +179,7 @@ Hello from Arduino! 👋
 ⏳
 ```
 
-Alternatively
+But there is simpler alternative!
 
 ```bash
 $ tinygo flash -monitor -baudrate=9600 -target arduino app.go
