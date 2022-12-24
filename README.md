@@ -72,6 +72,10 @@ $ du -h app
 1,1M	app
 ```
 
+ℹ️ If you use [Visual Studio Code](https://code.visualstudio.com/), 
+you may install the [Go extension](https://marketplace.visualstudio.com/items?itemName=golang.go)
+to get code completion, signature help, etc.
+
 ### 💻 Hello world! (PC/TinyGo version)
 
 `app.go`:
@@ -265,35 +269,11 @@ func main() {
 tinygo flash -target=arduino app.go
 ```
 
-----
-
-ℹ️ To have VS Code recognize the `machine` package that we have used,
-ask tinygo about arduino config with `tinygo info arduino`:
-
-```bash
-$ tinygo info arduino
-LLVM triple:       avr
-GOOS:              linux
-GOARCH:            arm
-build tags:        avr baremetal linux arm atmega328p atmega avr5 arduino tinygo math_big_pure_go gc.conservative scheduler.none serial.uart
-garbage collector: conservative
-scheduler:         none
-cached GOROOT:     /home/boisgera/.cache/tinygo/goroot-be4be59c5e4a687aa60cbb0b4c9469e2512531d5883e254b489df88789874889
-```
-
-Then, edit your `.vscode/settings.json` accordingly
 
 
-`.vscode/settings.json`:
-```json
-{
-    "go.toolsEnvVars": {
-        "GOROOT": "/home/boisgera/.cache/tinygo/goroot-1a3665987356bd3f26671cbe3d70be39fe7f2f9bf3a11bacdd5b79ba2096c3c9",
-        "GOFLAGS": "-tags=avr,baremetal,linux,arm,atmega328p,atmega,avr5,arduino,tinygo,math_big_pure_go,gc.conservative,scheduler.none,serial.uart"
-    }
-}
-```
-
+ℹ️ ℹ️ If you use [Visual Studio Code](https://code.visualstudio.com/), 
+you may install the [TinyGo extension](https://marketplace.visualstudio.com/items?itemName=tinygo.vscode-tinygo) and selec the `arduino` target to get code completion and signature 
+help for the `machine` package. 
 For more details, refer to the [TinyGo documentation](https://tinygo.org/docs/guides/ide-integration/vscode/)
 
 ### 📄 Intel HEX
