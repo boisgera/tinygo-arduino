@@ -271,7 +271,7 @@ tinygo flash -target=arduino app.go
 
 
 
-ℹ️ ℹ️ If you use [Visual Studio Code](https://code.visualstudio.com/), 
+ℹ️ If you use [Visual Studio Code](https://code.visualstudio.com/), 
 you may install the [TinyGo extension](https://marketplace.visualstudio.com/items?itemName=tinygo.vscode-tinygo) and selec the `arduino` target to get code completion and signature 
 help for the `machine` package. 
 For more details, refer to the [TinyGo documentation](https://tinygo.org/docs/guides/ide-integration/vscode/)
