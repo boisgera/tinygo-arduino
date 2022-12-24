@@ -179,7 +179,7 @@ Hello from Arduino! 👋
 ⏳
 ```
 
-But there is simpler alternative!
+But there is a simpler alternative with TinyGo:
 
 ```bash
 $ tinygo flash -monitor -baudrate=9600 -target arduino app.go
