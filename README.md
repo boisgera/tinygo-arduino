@@ -78,7 +78,7 @@ to get code completion, signature help, etc.
 
 ### 💻 Hello world! (PC/TinyGo version)
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -110,7 +110,7 @@ Hello! 👋
 
 ### 📟 Hello world! (Arduino/TinyGo version)
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -189,7 +189,7 @@ Hello from Arduino! 👋
 
 ### ⏱️ Time
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -213,7 +213,7 @@ Hello from Arduino! 👋
 ⏳
 ```
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -242,7 +242,7 @@ nice to have, but [they are buggy at the moment](https://github.com/tinygo-org/t
 
 ### 🚥 Blinky
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -358,7 +358,7 @@ To replicate the Blinky project, but with an external LED instead of the
 onboard one, we need little change in the `app.go` program; if we intend
 to connect the LED D4, we have:
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -443,7 +443,7 @@ func main() {
 
 ### 📉 ADC
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -500,7 +500,7 @@ See [Using PWM](https://tinygo.org/docs/tutorials/pwm/).
 ⚠️ Floating-point computations are not used here. They are not supported by
 the hardware and thus have to be emulated in software and this is costly.
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
