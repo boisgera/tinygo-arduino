@@ -389,6 +389,7 @@ func main() {
 To switch the LED state, press the button during at least 0.1 seconds, 
 then release it.
 
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
