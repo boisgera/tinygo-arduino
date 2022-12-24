@@ -156,7 +156,7 @@ avrdude done.  Thank you.
 pip install pyserial
 ```
 
-🐍 `read.py`:
+![](https://img.shields.io/static/v1?label=&message=read.py&logo=python&color=white)
 ```python
 import serial
 
