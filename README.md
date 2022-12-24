@@ -16,7 +16,7 @@
 
 ### 💻 Hello world! (PC/Go version)
 
-`app.go`:
+![](https://img.shields.io/static/v1?label=&message=app.go&logo=go&color=white)
 ```go
 package main
 
@@ -156,7 +156,7 @@ avrdude done.  Thank you.
 pip install pyserial
 ```
 
-`read.py`:
+🐍 `read.py`:
 ```python
 import serial
 
