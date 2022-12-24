@@ -4,7 +4,7 @@
 
 ## 🧭 Introduction
 
-[📖 Slide deck](https://boisgera.github.io/tinygo-arduino/slides/index.html)
+  - 📖 [Slide deck](https://boisgera.github.io/tinygo-arduino/slides/index.html)
 
 
 ## 📖 Documentation
