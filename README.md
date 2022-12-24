@@ -12,7 +12,7 @@
   - 📖 [Arduino Projects Book](https://github.com/boisgera/tinygo-arduino/raw/master/doc/arduino-projects-book.pdf), license [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/) by Arduino LLC.
 
 
-## 🧰 Do It Yourself
+## 🧰 Do It Yourself (DIY)
 
 ### 💻 Hello world! (PC/Go version)
 
@@ -152,24 +152,35 @@ avrdude done.  Thank you.
 pip install pyserial
 ```
 
-
 `read.py`:
 ```python
-#!/usr/bin/env python
-
 import serial
 
+# ⚙️ Configuration
 BAUD_RATE = 9600
 SERIAL_PORT = "/dev/ttyACM0"
 
+# ⏳ Loop
 with serial.Serial(SERIAL_PORT, BAUD_RATE) as file:
-    bytes = file.readline().strip()
-    print(bytes.decode("utf-8"))
+    while True:
+        bytes = file.readline().strip()
+        print(bytes.decode("utf-8"))
 ```
 
 ``` bash
-$ ./read.py
+$ python read.py
 Hello from Arduino! 👋
+⏳
+```
+
+Alternatively
+
+```bash
+$ tinygo flash -monitor -baudrate=9600 -target arduino app.go
+...
+Connected to /dev/ttyACM0. Press Ctrl-C to exit.
+Hello from Arduino! 👋
+⏳
 ```
 
 ### ⏱️ Time
@@ -188,28 +199,14 @@ func main() {
 }
 ```
 
-`read.py`:
-```python
-import serial
-
-BAUD_RATE = 9600
-SERIAL_PORT = "/dev/ttyACM0"
-
-with serial.Serial(SERIAL_PORT, BAUD_RATE) as file:
-    while True:
-        bytes = file.readline().strip()
-        print(bytes.decode("utf-8"))
-```
-
 ```bash
-tinygo flash -target=arduino app.go
-```
-
-```bash
-$ ./read.py
+$ tinygo flash -monitor -baudrate=9600 -target arduino app.go
+...
+Connected to /dev/ttyACM0. Press Ctrl-C to exit.
 Hello from Arduino! 👋
 Hello from Arduino! 👋
 Hello from Arduino! 👋
+⏳
 ```
 
 `app.go`:
@@ -227,21 +224,19 @@ func main() {
 ```
 
 ```bash
-$ ./read.py
-Hello from Arduino! 👋
-Hello from Arduino! 👋
-Hello from Arduino! 👋
-Hello from Arduino! 👋
-Hello from Arduino! 👋
+$ tinygo flash -monitor -baudrate=9600 -target arduino app.go
 ...
+Connected to /dev/ttyACM0. Press Ctrl-C to exit.
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+Hello from Arduino! 👋
+⏳
 ```
 
 ⚠️ The standard [`Timer` & `Ticker` standard API](https://pkg.go.dev/time) would be super 
 nice to have, but [they are buggy at the moment](https://github.com/tinygo-org/tinygo/issues/2169#issuecomment-985644057).
 
 ### 🚥 Blinky
-
-
 
 `app.go`:
 ```go
