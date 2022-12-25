@@ -95,7 +95,7 @@ Like C (efficient, low footprint, ...):
 
 
 
-Microcontrollers, Consoles, WebAssembly, etc.
+Microcontrollers (MCU), Consoles, WebAssembly, etc.
 
 --------------------------------------------------------------------------------
 
@@ -110,19 +110,23 @@ Microcontrollers, Consoles, WebAssembly, etc.
 
 --------------------------------------------------------------------------------
 
-# Languages for Embedded Platforms
+# MCU Programming Languages
 
-  - Assembler
+![bg left:33%](images/vishnu-mohanan-yC_7U1g3Kvs-unsplash.jpg)
 
-  - C (or some very restricted C++)
+  - Assembly (ASM)
+
+  - C
+
+  - C++
 
   - (Tiny)Go
 
-  - (Micro/Circuits)Python
+  - ![height:1em](images/python-logo.png) Python $\to$ ![height:1em](images/micropython-logo.png) [MicroPython](https://micropython.org/)
 
   - Erlang/Elixir (via AtomVM or Nerves)
 
-  - Rust
+  - ![height:1em](images/rust_logo.svg) [Rust](https://www.rust-lang.org/)
 
   - Zig
 
